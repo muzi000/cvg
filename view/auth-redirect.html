@@ -1,0 +1,15 @@
+<html lang="zh-CN">
+    <head>
+        <title>vuln-go</title>
+    </head>
+    <body>
+        未登录，自动跳转中...
+        <a href="{{.redictUrl}}">点我立即跳转</a>
+        <script language="javascript" type="text/javascript"> 
+            // 以下方式直接跳转
+            //window.location.href='{{.redictUrl}}';
+            // 以下方式定时跳转
+            setTimeout("javascript:location.href='{{.redictUrl}}'", 3000); 
+        </script>
+    </body>
+</html>

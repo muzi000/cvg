@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM XSS</title>
+</head>
+<body>
+<script>
+	var pos=document.URL.indexOf("xxs=")+4;
+	document.write(decodeURI(document.URL.substring(pos,document.URL.length)));
+</script>
+</body>
+</html>
