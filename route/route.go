@@ -136,5 +136,7 @@ func InitRoute() *gin.Engine {
 	xss.GET("/store/show", controller.XSSShow)
 	xss.GET("/dom", controller.XSSDomVuln)
 
+	//ldap
+	r.GET("/ldap", controller.LdapVuln1)
 	return r
 }

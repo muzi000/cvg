@@ -59,7 +59,7 @@ func Login(ctx *gin.Context) {
 		})
 		return
 	}
-	ctx.HTML(http.StatusFound, "redict.html", gin.H{
+	ctx.HTML(http.StatusFound, "redirect.html", gin.H{
 		"redirectUrl": returnPath,
 	})
 	// ctx.JSON(http.StatusOK, gin.H{

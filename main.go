@@ -9,18 +9,28 @@ import (
 	"os/signal"
 	"time"
 
+	"github.com/muzi000/vuln-go/config"
 	"github.com/muzi000/vuln-go/controller"
 	"github.com/muzi000/vuln-go/route"
 )
 
 func main() {
 	image()
-	err := controller.InitDB()
+	err := config.InitSetting()
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
-
+	err = controller.InitDB()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	err = controller.InitLdap()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
 	r := route.InitRoute()
 	srv := &http.Server{
 		Addr:    ":8080",

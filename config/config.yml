@@ -1,3 +1,22 @@
-mysql:
-  user:""
-  password:""
+Database:
+  DBType: mysql
+  Username: root  # 填写你的数据库账号
+  Password: rootwolf  # 填写你的数据库密码
+  Host: 127.0.0.1
+  Port: 3306
+  DBName: vuln
+  Charset: utf8
+  ParseTime: True
+
+Server:
+  RunMode: debug
+  HttpPort: 8000
+
+Ldap:
+  Method: tcp
+  Host: 127.0.0.1
+  Port: 389
+  Base: dc=libaigo,dc=com
+  UserName: cd=admin
+  Password: Pa123456
+  
